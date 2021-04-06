@@ -6,12 +6,16 @@ const http = require('http');
 const session = require('express-session');
 var MemoryStore = require('memorystore')(session)
 const bodyParser = require('body-parser');
+const userjs = require('./routes/user');
 
 
 
 const cors = require('cors');
 app.use(express.json());
 app.use(cors({ origin: true }));
+
+app.use('/api/user', userjs);
+
 
 app.use(session({
     secret: 'the star wars family',
