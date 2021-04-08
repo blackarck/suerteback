@@ -49,11 +49,11 @@ let checkToken = (req, res, next) => {
     }
 };
 
-let getuserdata = () => {
+let getUserData = () => {
     return userdata;
 }
 
 module.exports = {
     checkToken: checkToken,
-    getuserdata: getuserdata
+    getUserData: getUserData
 }
